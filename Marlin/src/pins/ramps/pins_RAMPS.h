@@ -148,24 +148,24 @@
   #define X_CS_PIN                            53
 #endif
 
-#define Y_STEP_PIN                            60
-#define Y_DIR_PIN                             61
-#define Y_ENABLE_PIN                          56
-#ifndef Y_CS_PIN
-  #define Y_CS_PIN                            49
+#define Z_STEP_PIN                            60
+#define Z_DIR_PIN                             61
+#define Z_ENABLE_PIN                          56
+#ifndef Z_CS_PIN
+  #define Z_CS_PIN                            49
 #endif
 
-#ifndef Z_STEP_PIN
-  #define Z_STEP_PIN                          46
+#ifndef Y_STEP_PIN
+  #define Y_STEP_PIN                          46
 #endif
-#ifndef Z_DIR_PIN
-  #define Z_DIR_PIN                           48
+#ifndef Y_DIR_PIN
+  #define Y_DIR_PIN                           48
 #endif
-#ifndef Z_ENABLE_PIN
-  #define Z_ENABLE_PIN                        62
+#ifndef Y_ENABLE_PIN
+  #define Y_ENABLE_PIN                        62
 #endif
-#ifndef Z_CS_PIN
-  #define Z_CS_PIN                            40
+#ifndef Y_CS_PIN
+  #define Y_CS_PIN                            40
 #endif
 
 #ifndef E0_STEP_PIN
@@ -304,12 +304,12 @@
   #if NUM_SERVOS < 2                              // Use servo connector if possible
     #define SPINDLE_LASER_ENA_PIN              4  // Pullup or pulldown!
     #ifndef SPINDLE_LASER_PWM_PIN
-      #define SPINDLE_LASER_PWM_PIN            6  // Hardware PWM
+      #define SPINDLE_LASER_PWM_PIN            9  // Hardware PWM
     #endif
     #define SPINDLE_DIR_PIN                    5
   #elif HAS_FREE_AUX2_PINS
     #define SPINDLE_LASER_ENA_PIN             40  // Pullup or pulldown!
-    #define SPINDLE_LASER_PWM_PIN             44  // Hardware PWM
+    #define SPINDLE_LASER_PWM_PIN             9  // Hardware PWM
     #define SPINDLE_DIR_PIN                   65
   #else
     #error "No auto-assignable Spindle/Laser pins available."
